@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://inkdesignstudio.co.in/sitemap.xml
