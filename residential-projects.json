@@ -1,1 +1,69 @@
 
+[
+  {
+    "title": "2 BHK Residence",
+    "location": "Malad East, Mumbai · 1,500 sq. ft.",
+    "image": "assets/residential/malad-2bhk-1500-sqft.png"
+  },
+  {
+    "title": "Residence Apartment",
+    "location": "Prabhadevi, Mumbai · 1,500 sq. ft.",
+    "image": "assets/residential/prabhadevi-residence-1500-sqft.png"
+  },
+  {
+    "title": "Triplex Apartment",
+    "location": "Dadar / Prabhadevi, Mumbai · 6,500 sq. ft.",
+    "image": "assets/residential/triplex-apartment-dadar-6500-sqft.png"
+  },
+  {
+    "title": "Duplex Apartment",
+    "location": "Juhu, Mumbai · 2,500 sq. ft.",
+    "image": "assets/residential/duplex-apartment-juhu-2500-sqft.png"
+  },
+  {
+    "title": "Residence Apartment",
+    "location": "Ghatkopar, Mumbai",
+    "image": "assets/residential/ghatkopar-residence-1200-sqft.png"
+  },
+  {
+    "title": "3 BHK Residence",
+    "location": "Ghatkopar, Mumbai · 1,500 sq. ft.",
+    "image": "assets/residential/ghatkopar-residence-3bhk-1500-sqft.png"
+  },
+  {
+    "title": "Residence Apartment",
+    "location": "Kandivali, Mumbai · 950 sq. ft.",
+    "image": "assets/residential/kandivali-residence-950-sqft.png"
+  },
+  {
+    "title": "Weekend Home",
+    "location": "Alibaug · 5,500 sq. ft.",
+    "image": "assets/residential/alibaug-weekend-home-5500-sqft.png"
+  },
+  {
+    "title": "Harmony Residence",
+    "location": "Panvel · 2 BHK · 850 sq. ft.",
+    "image": "assets/residential/harmony-residence-panvel-2bhk-850-sqft.png"
+  },
+  {
+    "title": "Bedroom Interiors",
+    "location": "Alibaug",
+    "image": "assets/residential/alibaug-bedroom-interiors.png"
+  },
+  {
+    "title": "Residential Project",
+    "location": "Details to be confirmed",
+    "image": "assets/residential/residential-project-08.png"
+  },
+  {
+    "title": "Residential Project",
+    "location": "Details to be confirmed",
+    "image": "assets/residential/residential-project-10.png"
+  },
+  {
+    "title": "2 BHK Residence",
+    "location": "Juhu, Mumbai · 900 sq. ft.",
+    "image": "assets/residential/juhu-residence-2bhk-900-sqft.png"
+  }
+]
+
