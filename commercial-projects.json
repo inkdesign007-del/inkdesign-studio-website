@@ -1,0 +1,72 @@
+[
+  {
+    "title": "State Bank of Mauritius",
+    "location": "Delhi",
+    "image": "assets/commercial/state-bank-of-mauritius-delhi.jpg"
+  },
+  {
+    "title": "3i Infotech",
+    "location": "Noida",
+    "image": "assets/commercial/3i-infotech-noida.jpg"
+  },
+  {
+    "title": "Milan Pharma Factory Office",
+    "location": "Dahej",
+    "image": "assets/commercial/milan-pharma-factory-dahej.jpg"
+  },
+  {
+    "title": "Milan Pharma QC",
+    "location": "Dahej",
+    "image": "assets/commercial/milan-pharma-qc-dahej.jpg"
+  },
+  {
+    "title": "Berger Paint",
+    "location": "Jejuri",
+    "image": "assets/commercial/berger-paint-jejuri-office.jpg"
+  },
+  {
+    "title": "Johnson Matthey",
+    "location": "Mumbai",
+    "image": "assets/commercial/johnson-matthey-mumbai.jpg"
+  },
+  {
+    "title": "Iron Mountain",
+    "location": "Pune",
+    "image": "assets/commercial/iron-mountain-pune.jpg"
+  },
+  {
+    "title": "Concentrix",
+    "location": "Thane",
+    "image": "assets/commercial/concentrix-thane.jpg"
+  },
+  {
+    "title": "Hello Verify",
+    "location": "Noida",
+    "image": "assets/commercial/hello-verify-noida.jpg"
+  },
+  {
+    "title": "Markel",
+    "location": "Mumbai",
+    "image": "assets/commercial/markel-mumbai.jpg"
+  },
+  {
+    "title": "Berger Paint Factory",
+    "location": "Jejuri",
+    "image": "assets/commercial/berger-paint-factory-jejuri.jpg"
+  },
+  {
+    "title": "3i Infotech Cafeteria",
+    "location": "Noida",
+    "image": "assets/commercial/3i-infotech-noida-cafeteria.jpg"
+  },
+  {
+    "title": "The Beer Café",
+    "location": "Mumbai",
+    "image": "assets/commercial/the-beer-cafe-mumbai.jpg"
+  },
+  {
+    "title": "The Beer Café – Interior Views",
+    "location": "Mumbai",
+    "image": "assets/commercial/the-beer-cafe-mumbai-interior.jpg"
+  }
+]
