@@ -90,3 +90,59 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error(error);
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const gallery = document.getElementById("residential-projects");
+
+  if (!gallery) return;
+
+  fetch("residential-projects.json")
+    .then(function (response) {
+      if (!response.ok) {
+        throw new Error("Could not load residential project data");
+      }
+      return response.json();
+    })
+    .then(function (projects) {
+      gallery.innerHTML = "";
+
+      projects.forEach(function (project) {
+        const card = document.createElement("article");
+        card.className = "project-card";
+
+        const imageWrap = document.createElement("div");
+        imageWrap.className = "project-image";
+
+        const image = document.createElement("img");
+        image.src = project.image;
+        image.alt = project.title || "Residential interior project";
+        image.loading = "lazy";
+
+        image.onerror = function () {
+          card.style.display = "none";
+          console.warn("Residential image not found:", project.image);
+        };
+
+        const title = document.createElement("h3");
+        title.textContent = project.title || "Residential Project";
+
+        const location = document.createElement("p");
+        location.textContent = project.location || "";
+
+        imageWrap.appendChild(image);
+        card.appendChild(imageWrap);
+        card.appendChild(title);
+        card.appendChild(location);
+        gallery.appendChild(card);
+      });
+
+      if (projects.length === 0) {
+        gallery.textContent = "Residential projects will be added soon.";
+      }
+    })
+    .catch(function (error) {
+      gallery.textContent =
+        "Residential projects could not load. Please check the project data.";
+      console.error(error);
+    });
+});
