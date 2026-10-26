@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Interior Design | InkDesign Studio</title>
+  <meta name="description" content="Get a personalised interior design starter report for your home, villa, holiday home or rental property with InkDesign Studio.">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #262822;
+      background: #f7f6f1;
+      line-height: 1.6;
+    }
+    .topbar {
+      background: #20251f;
+      color: white;
+      padding: 20px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .brand { font-size: 22px; font-weight: bold; letter-spacing: 1px; }
+    .brand span { display: block; font-size: 10px; letter-spacing: 3px; font-weight: normal; }
+    .topbar a { color: white; text-decoration: none; }
+    .hero {
+      padding: 70px 6% 60px;
+      background: #e9e9df;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: bold;
+      color: #67734f;
+    }
+    h1 { font-size: clamp(34px, 5vw, 56px); line-height: 1.1; margin: 15px 0; }
+    h2 { line-height: 1.2; }
+    .hero p { font-size: 17px; max-width: 620px; }
+    .price { font-size: 27px; font-weight: bold; margin: 20px 0; }
+    .price small { font-size: 14px; font-weight: normal; }
+    .btn {
+      display: inline-block;
+      border: 0;
+      background: #68744f;
+      color: white;
+      padding: 14px 22px;
+      border-radius: 4px;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .hero-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 10px 35px #0000000c;
+    }
+    .hero-card ul { padding-left: 20px; }
+    .section { padding: 55px 6%; }
+    .section-heading { max-width: 700px; margin-bottom: 28px; }
+    .section-heading p { color: #66695f; }
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .category {
+      background: white;
+      padding: 22px;
+      border: 1px solid #e3e2d9;
+      border-radius: 6px;
+    }
+    .category h3 { margin-top: 0; }
+    .category p { color: #66695f; font-size: 14px; margin-bottom: 0; }
+    .form-wrap {
+      background: white;
+      padding: 32px;
+      border-radius: 8px;
+      max-width: 950px;
+      box-shadow: 0 8px 30px #00000008;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    .field { display: flex; flex-direction: column; gap: 6px; }
+    .full { grid-column: 1 / -1; }
+    label { font-weight: bold; font-size: 14px; }
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #d5d5cc;
+      border-radius: 4px;
+      font: inherit;
+      background: white;
+      color: #262822;
+    }
+    textarea { min-height: 100px; resize: vertical; }
+    .hint { font-size: 12px; color: #6a6b64; }
+    .notice {
+      padding: 14px;
+      background: #f3f3ed;
+      border-left: 3px solid #68744f;
+      font-size: 13px;
+      margin: 20px 0;
+    }
+    .footer {
+      padding: 25px 6%;
+      background: #20251f;
+      color: white;
+      font-size: 13px;
+    }
+    .footer a { color: white; }
+    @media (max-width: 700px) {
+      .hero { grid-template-columns: 1fr; padding-top: 45px; }
+      .categories { grid-template-columns: 1fr 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
+      .full { grid-column: auto; }
+      .form-wrap { padding: 22px; }
+    }
+    @media (max-width: 420px) {
+      .categories { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    INKDESIGN STUDIO
+    <span>INTERIORS · PLANNING · DESIGN</span>
+  </div>
+  <a href="#enquiry">Start Your Design Journey ↗</a>
+</header>
+
+<main>
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Thoughtful design. A clearer plan.</div>
+      <h1>Your space.<br>Your style.<br>A smarter start.</h1>
+      <p>
+        Tell us about your property, your ideas and your budget.
+        Get started with a personalised interior design report
+        from InkDesign Studio.
+      </p>
+      <div class="price">₹199 <small>· Starter design report</small></div>
+      <a class="btn" href="#enquiry">Personalise My Design Report</a>
+    </div>
+    <div class="hero-card">
+      <h2>What your starter report can include</h2>
+      <ul>
+        <li>Design direction and style recommendations</li>
+        <li>Smart space-planning suggestions</li>
+        <li>Colour palette and material ideas</li>
+        <li>Indicative budget insights</li>
+        <li>Practical tips tailored to your requirements</li>
+      </ul>
+      <p class="hint">The report is a starting point, not a substitute for measured drawings or a full execution BOQ.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <div class="eyebrow">Designed around your property</div>
+      <h2>What would you like to design?</h2>
+      <p>From compact city homes to holiday retreats, start with the space you have.</p>
+    </div>
+    <div class="categories">
+      <div class="category">
+        <h3>Studio Living</h3>
+        <p>Studio apartments, compact homes and efficient small-space planning.</p>
+      </div>
+      <div class="category">
+        <h3>Apartment Living</h3>
+        <p>1 BHK and 2 BHK homes with practical, stylish everyday interiors.</p>
+      </div>
+      <div class="category">
+        <h3>Family Residences</h3>
+        <p>3 BHK, 4 BHK and larger family homes.</p>
+      </div>
+      <div class="category">
+        <h3>Villa & Bungalow</h3>
+        <p>Independent houses, duplexes, villas and bungalows.</p>
+      </div>
+      <div class="category">
+        <h3>StayScape</h3>
+        <p>Airbnb properties, holiday rentals, homestays and guest accommodation.</p>
+      </div>
+      <div class="category">
+        <h3>Weekend & Retreat Homes</h3>
+        <p>Farmhouses, cottages, weekend homes and private retreats.</p>
+      </div>
+      <div class="category">
+        <h3>Commercial & Workspaces</h3>
+        <p>Offices, studios, clinics, shops and other professional spaces.</p>
+      </div>
+      <div class="category">
+        <h3>One Room at a Time</h3>
+        <p>Living rooms, bedrooms, kitchens, bathrooms and other individual spaces.</p>
+      </div>
+      <div class="category">
+        <h3>Custom Space</h3>
+        <p>Have a different project in mind? Tell us what you need.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="enquiry" style="background:#eeeee7;">
+    <div class="section-heading">
+      <div class="eyebrow">Step 1 · Tell us about your space</div>
+      <h2>Let's understand your vision.</h2>
+      <p>Complete the details below so we can prepare the right starting point for your project.</p>
+    </div>
+
+    <div class="form-wrap">
+      <form id="designEnquiry">
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">Full name *</label>
+            <input id="name" name="name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="phone">WhatsApp / mobile number *</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel"
+              inputmode="tel" pattern="[0-9+() -]{8,18}" required>
+          </div>
+          <div class="field">
+            <label for="email">Email address *</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="location">Property location / city *</label>
+            <input id="location" name="location" placeholder="e.g. Navi Mumbai" required>
+          </div>
+          <div class="field">
+            <label for="property">Property type *</label>
+            <select id="property" name="property" required>
+              <option value="">Select property type</option>
+              <option>Studio Apartment</option>
+              <option>1 BHK Apartment</option>
+              <option>2 BHK Apartment</option>
+              <option>3 BHK Apartment</option>
+              <option>4 BHK Apartment</option>
+              <option>Large / Luxury Apartment</option>
+              <option>Villa / Bungalow / Duplex</option>
+              <option>Airbnb / Holiday Rental / Homestay</option>
+              <option>Weekend Home / Farmhouse / Cottage</option>
+              <option>Commercial / Office / Retail</option>
+              <option>Single Room / Individual Space</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="stage">Project stage *</label>
+            <select id="stage" name="stage" required>
+              <option value="">Select project stage</option>
+              <option>Planning to buy / rent</option>
+              <option>Recently purchased</option>
+              <option>Possession received</option>
+              <option>Renovation of existing property</option>
+              <option>Holiday rental / investment project</option>
+              <option>Under construction</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="area">Approximate area (sq. ft.)</label>
+            <input id="area" name="area" type="number" min="1" placeholder="e.g. 950">
+          </div>
+          <div class="field">
+            <label for="rooms">Spaces to design *</label>
+            <select id="rooms" name="rooms" required>
+              <option value="">Select spaces</option>
+              <option>Entire property</option>
+              <option>Living room</option>
+              <option>Bedroom(s)</option>
+              <option>Kitchen</option>
+              <option>Bathroom(s)</option>
+              <option>Living room + kitchen</option>
+              <option>Multiple selected rooms</option>
+              <option>Rental / guest experience planning</option>
+              <option>Other / not sure yet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="budget">Indicative interior budget *</label>
+            <select id="budget" name="budget" required>
+              <option value="">Select budget range</option>
+              <option>Below ₹2 lakh</option>
+              <option>₹2 lakh – ₹5 lakh</option>
+              <option>₹5 lakh – ₹10 lakh</option>
+              <option>₹10 lakh – ₹20 lakh</option>
+              <option>₹20 lakh – ₹40 lakh</option>
+              <option>₹40 lakh and above</option>
+              <option>Need guidance to decide</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="style">Preferred design style *</label>
+            <select id="style" name="style" required>
+              <option value="">Select a style</option>
+              <option>Modern contemporary</option>
+              <option>Minimalist</option>
+              <option>Luxury / premium</option>
+              <option>Warm and natural</option>
+              <option>Traditional / Indian</option>
+              <option>Industrial</option>
+              <option>Scandinavian</option>
+              <option>Resort / holiday-home style</option>
+              <option>Rental-friendly and durable</option>
+              <option>Not sure — recommend a style</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="requirements">Specific needs or ideas</label>
+            <textarea id="requirements" name="requirements"
+              placeholder="Tell us about storage, family needs, must-have features, rental goals or anything else important."></textarea>
+          </div>
+        </div>
+
+        <div class="notice">
+          <strong>What happens next?</strong><br>
+          Your details will help us understand your requirements. The enquiry form is currently a preview and does not yet submit or store your information. Payment and report generation will be connected and tested separately.
+        </div>
+        <button class="btn" type="submit">Review My Design Details</button>
+        <p class="hint">No payment is taken by this button at this stage.</p>
+        <p id="formMessage" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <strong>InkDesign Studio</strong><br>
+  Interior design, space planning and design consultancy.<br>
+  <a href="https://inkdesignstudio.co.in/">Visit our main website</a>
+</footer>
+
+<script>
+  document.getElementById("designEnquiry").addEventListener("submit", function(event) {
+    event.preventDefault();
+    document.getElementById("formMessage").textContent =
+      "Preview only: your details have not been sent or saved. We will connect the form after the page design is approved.";
+  });
+</script>
+
+</body>
+</html>
