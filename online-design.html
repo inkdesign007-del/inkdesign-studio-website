@@ -285,6 +285,18 @@
     <div class="form-wrap">
       <form id="designEnquiry">
         <div class="form-grid">
+          
+<div class="field full">
+  <label for="package">Select your design package *</label>
+  <select id="package" name="package" required>
+    <option value="">Choose a package</option>
+    <option value="Starter Report - 199">Starter Report — ₹199</option>
+    <option value="Basic Layout Planning - 999">Basic Layout Planning — ₹999</option>
+    <option value="Detailed Design - 4999">Detailed Design — ₹4,999</option>
+    <option value="Premium Design - 9999">Premium Design — ₹9,999</option>
+  </select>
+</div>
+
           <div class="field">
             <label for="name">Full name *</label>
             <input id="name" name="name" autocomplete="name" required>
@@ -368,6 +380,28 @@
             <label for="style">Preferred design style *</label>
             <select id="style" name="style" required>
               <option value="">Select a style</option>
+              
+<div class="field full">
+  <label for="layoutFile">Upload floor plan / layout</label>
+  <input
+    id="layoutFile"
+    name="layoutFile"
+    type="file"
+    accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png">
+  <span class="hint">PDF, JPG or PNG. Maximum recommended size: 10 MB.</span>
+</div>
+
+<div class="field full">
+  <label for="roomPhotos">Upload room photos (optional)</label>
+  <input
+    id="roomPhotos"
+    name="roomPhotos"
+    type="file"
+    accept=".jpg,.jpeg,.png,image/jpeg,image/png"
+    multiple>
+  <span class="hint">You can select multiple photos of your existing room or design inspiration.</span>
+</div>
+
               <option>Modern contemporary</option>
               <option>Minimalist</option>
               <option>Luxury / premium</option>
