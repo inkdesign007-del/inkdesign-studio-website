@@ -1,13 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Online Interior Design | InkDesign Studio</title>
-  <meta name="description" content="Get a personalised interior design starter report for your home, villa, holiday home or rental property with InkDesign Studio.">
+  <meta name="description" content="Get personalised interior design services for your home, villa, holiday home or rental property with InkDesign Studio.">
+
   <style>
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -15,6 +16,7 @@
       background: #f7f6f1;
       line-height: 1.6;
     }
+
     .topbar {
       background: #20251f;
       color: white;
@@ -25,9 +27,25 @@
       gap: 15px;
       flex-wrap: wrap;
     }
-    .brand { font-size: 22px; font-weight: bold; letter-spacing: 1px; }
-    .brand span { display: block; font-size: 10px; letter-spacing: 3px; font-weight: normal; }
-    .topbar a { color: white; text-decoration: none; }
+
+    .brand {
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .brand span {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 3px;
+      font-weight: normal;
+    }
+
+    .topbar a {
+      color: white;
+      text-decoration: none;
+    }
+
     .hero {
       padding: 70px 6% 60px;
       background: #e9e9df;
@@ -36,6 +54,7 @@
       gap: 40px;
       align-items: center;
     }
+
     .eyebrow {
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -43,11 +62,31 @@
       font-weight: bold;
       color: #67734f;
     }
-    h1 { font-size: clamp(34px, 5vw, 56px); line-height: 1.1; margin: 15px 0; }
+
+    h1 {
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 1.1;
+      margin: 15px 0;
+    }
+
     h2 { line-height: 1.2; }
-    .hero p { font-size: 17px; max-width: 620px; }
-    .price { font-size: 27px; font-weight: bold; margin: 20px 0; }
-    .price small { font-size: 14px; font-weight: normal; }
+
+    .hero p {
+      font-size: 17px;
+      max-width: 620px;
+    }
+
+    .price {
+      font-size: 27px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .price small {
+      font-size: 14px;
+      font-weight: normal;
+    }
+
     .btn {
       display: inline-block;
       border: 0;
@@ -59,29 +98,71 @@
       text-decoration: none;
       cursor: pointer;
     }
+
+    .btn:hover {
+      background: #505b3c;
+    }
+
     .hero-card {
       background: #fff;
       padding: 30px;
       border-radius: 8px;
       box-shadow: 0 10px 35px #0000000c;
     }
+
     .hero-card ul { padding-left: 20px; }
+
     .section { padding: 55px 6%; }
-    .section-heading { max-width: 700px; margin-bottom: 28px; }
+
+    .section-heading {
+      max-width: 700px;
+      margin-bottom: 28px;
+    }
+
     .section-heading p { color: #66695f; }
+
     .categories {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 16px;
     }
+
     .category {
       background: white;
       padding: 22px;
       border: 1px solid #e3e2d9;
       border-radius: 6px;
     }
+
     .category h3 { margin-top: 0; }
-    .category p { color: #66695f; font-size: 14px; margin-bottom: 0; }
+
+    .category p {
+      color: #66695f;
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    .package-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+      margin-top: 28px;
+    }
+
+    .package-card {
+      background: #fff;
+      padding: 26px;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .package-card .btn {
+      margin-top: auto;
+      align-self: flex-start;
+    }
+
     .form-wrap {
       background: white;
       padding: 32px;
@@ -89,14 +170,27 @@
       max-width: 950px;
       box-shadow: 0 8px 30px #00000008;
     }
+
     .form-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 18px;
     }
-    .field { display: flex; flex-direction: column; gap: 6px; }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-width: 0;
+    }
+
     .full { grid-column: 1 / -1; }
-    label { font-weight: bold; font-size: 14px; }
+
+    label {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
     input, select, textarea {
       width: 100%;
       padding: 12px;
@@ -106,8 +200,22 @@
       background: white;
       color: #262822;
     }
-    textarea { min-height: 100px; resize: vertical; }
-    .hint { font-size: 12px; color: #6a6b64; }
+
+    input[type="file"] {
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .hint {
+      font-size: 12px;
+      color: #6a6b64;
+    }
+
     .notice {
       padding: 14px;
       background: #f3f3ed;
@@ -115,25 +223,42 @@
       font-size: 13px;
       margin: 20px 0;
     }
+
+    #formMessage {
+      font-size: 14px;
+      margin-top: 12px;
+    }
+
     .footer {
       padding: 25px 6%;
       background: #20251f;
       color: white;
       font-size: 13px;
     }
+
     .footer a { color: white; }
+
     @media (max-width: 700px) {
-      .hero { grid-template-columns: 1fr; padding-top: 45px; }
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 45px;
+      }
+
       .categories { grid-template-columns: 1fr 1fr; }
+
       .form-grid { grid-template-columns: 1fr; }
+
       .full { grid-column: auto; }
+
       .form-wrap { padding: 22px; }
     }
+
     @media (max-width: 420px) {
       .categories { grid-template-columns: 1fr; }
     }
   </style>
 </head>
+
 <body>
 
 <header class="topbar">
@@ -141,24 +266,33 @@
     INKDESIGN STUDIO
     <span>INTERIORS · PLANNING · DESIGN</span>
   </div>
+
   <a href="#enquiry">Start Your Design Journey ↗</a>
 </header>
 
 <main>
+
+  <!-- HERO SECTION -->
   <section class="hero">
     <div>
       <div class="eyebrow">Thoughtful design. A clearer plan.</div>
+
       <h1>Your space.<br>Your style.<br>A smarter start.</h1>
+
       <p>
         Tell us about your property, your ideas and your budget.
-        Get started with a personalised interior design report
+        Get started with personalised interior design services
         from InkDesign Studio.
       </p>
+
       <div class="price">₹199 <small>· Starter design report</small></div>
+
       <a class="btn" href="#enquiry">Personalise My Design Report</a>
     </div>
+
     <div class="hero-card">
       <h2>What your starter report can include</h2>
+
       <ul>
         <li>Design direction and style recommendations</li>
         <li>Smart space-planning suggestions</li>
@@ -166,156 +300,229 @@
         <li>Indicative budget insights</li>
         <li>Practical tips tailored to your requirements</li>
       </ul>
-      <p class="hint">The report is a starting point, not a substitute for measured drawings or a full execution BOQ.</p>
+
+      <p class="hint">
+        The report is a starting point, not a substitute for measured
+        drawings or a full execution BOQ.
+      </p>
     </div>
   </section>
 
+  <!-- PROPERTY CATEGORIES -->
   <section class="section">
     <div class="section-heading">
       <div class="eyebrow">Designed around your property</div>
       <h2>What would you like to design?</h2>
-      <p>From compact city homes to holiday retreats, start with the space you have.</p>
+      <p>
+        From compact city homes to holiday retreats, start with the space you have.
+      </p>
     </div>
+
     <div class="categories">
+
       <div class="category">
         <h3>Studio Living</h3>
         <p>Studio apartments, compact homes and efficient small-space planning.</p>
       </div>
+
       <div class="category">
         <h3>Apartment Living</h3>
         <p>1 BHK and 2 BHK homes with practical, stylish everyday interiors.</p>
       </div>
+
       <div class="category">
         <h3>Family Residences</h3>
         <p>3 BHK, 4 BHK and larger family homes.</p>
       </div>
+
       <div class="category">
-        <h3>Villa & Bungalow</h3>
+        <h3>Villa &amp; Bungalow</h3>
         <p>Independent houses, duplexes, villas and bungalows.</p>
       </div>
+
       <div class="category">
         <h3>StayScape</h3>
         <p>Airbnb properties, holiday rentals, homestays and guest accommodation.</p>
       </div>
+
       <div class="category">
-        <h3>Weekend & Retreat Homes</h3>
+        <h3>Weekend &amp; Retreat Homes</h3>
         <p>Farmhouses, cottages, weekend homes and private retreats.</p>
       </div>
+
       <div class="category">
-        <h3>Commercial & Workspaces</h3>
+        <h3>Commercial &amp; Workspaces</h3>
         <p>Offices, studios, clinics, shops and other professional spaces.</p>
       </div>
+
       <div class="category">
         <h3>One Room at a Time</h3>
         <p>Living rooms, bedrooms, kitchens, bathrooms and other individual spaces.</p>
       </div>
+
       <div class="category">
         <h3>Custom Space</h3>
         <p>Have a different project in mind? Tell us what you need.</p>
       </div>
+
     </div>
   </section>
 
-<section class="section" id="design-packages">
-  <div class="section-heading">
-    <div class="eyebrow">Choose your design journey</div>
-    <h2>Interior Design Packages</h2>
-    <p>Choose the right level of design support for your space and budget.</p>
-  </div>
-
-  <div class="package-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;margin-top:28px;">
-
-    <div class="package-card" style="background:#fff;padding:26px;border-radius:12px;border:1px solid #ddd;">
-      <div class="eyebrow">Package 2</div>
-      <h3>Basic Layout Planning</h3>
-      <div class="price">₹999</div>
-      <p>Practical space planning for a better-organised home.</p>
-      <ul>
-        <li>Furniture layout suggestions</li>
-        <li>Space utilisation recommendations</li>
-        <li>Basic design direction</li>
-        <li>Colour and style suggestions</li>
-      </ul>
-      <a class="btn" href="#enquiry">Choose Basic Layout</a>
+  <!-- DESIGN PACKAGES -->
+  <section class="section" id="design-packages">
+    <div class="section-heading">
+      <div class="eyebrow">Choose your design journey</div>
+      <h2>Interior Design Packages</h2>
+      <p>Choose the right level of design support for your space and budget.</p>
     </div>
 
-    <div class="package-card" style="background:#fff;padding:26px;border-radius:12px;border:1px solid #ddd;">
-      <div class="eyebrow">Package 3</div>
-      <h3>Detailed Design</h3>
-      <div class="price">₹4,999</div>
-      <p>A more detailed design plan to guide your interiors.</p>
-      <ul>
-        <li>Detailed furniture layout</li>
-        <li>Room-wise design direction</li>
-        <li>Colour and material recommendations</li>
-        <li>Indicative budget guidance</li>
-      </ul>
-      <a class="btn" href="#enquiry">Choose Detailed Design</a>
+    <div class="package-grid">
+
+      <div class="package-card">
+        <div class="eyebrow">Package 1</div>
+        <h3>Starter Report</h3>
+        <div class="price">₹199</div>
+        <p>A personalised starting point for your interior design journey.</p>
+        <ul>
+          <li>Design direction and style suggestions</li>
+          <li>Space-planning recommendations</li>
+          <li>Colour and material ideas</li>
+          <li>Indicative budget insights</li>
+        </ul>
+        <a class="btn" href="#enquiry" data-package="Starter Report - 199">
+          Choose Starter Report
+        </a>
+      </div>
+
+      <div class="package-card">
+        <div class="eyebrow">Package 2</div>
+        <h3>Basic Layout Planning</h3>
+        <div class="price">₹999</div>
+        <p>Practical space planning for a better-organised home.</p>
+        <ul>
+          <li>Furniture layout suggestions</li>
+          <li>Space utilisation recommendations</li>
+          <li>Basic design direction</li>
+          <li>Colour and style suggestions</li>
+        </ul>
+        <a class="btn" href="#enquiry" data-package="Basic Layout Planning - 999">
+          Choose Basic Layout
+        </a>
+      </div>
+
+      <div class="package-card">
+        <div class="eyebrow">Package 3</div>
+        <h3>Detailed Design</h3>
+        <div class="price">₹4,999</div>
+        <p>A more detailed design plan to guide your interiors.</p>
+        <ul>
+          <li>Detailed furniture layout</li>
+          <li>Room-wise design direction</li>
+          <li>Colour and material recommendations</li>
+          <li>Indicative budget guidance</li>
+        </ul>
+        <a class="btn" href="#enquiry" data-package="Detailed Design - 4999">
+          Choose Detailed Design
+        </a>
+      </div>
+
+      <div class="package-card">
+        <div class="eyebrow">Package 4</div>
+        <h3>Premium Design</h3>
+        <div class="price">₹9,999</div>
+        <p>Comprehensive design guidance for your interior project.</p>
+        <ul>
+          <li>Detailed space planning</li>
+          <li>Room-wise design concepts</li>
+          <li>Material and finish recommendations</li>
+          <li>Furniture and lighting direction</li>
+          <li>Indicative project budget guidance</li>
+        </ul>
+        <a class="btn" href="#enquiry" data-package="Premium Design - 9999">
+          Choose Premium Design
+        </a>
+      </div>
+
     </div>
 
-    <div class="package-card" style="background:#fff;padding:26px;border-radius:12px;border:1px solid #ddd;">
-      <div class="eyebrow">Package 4</div>
-      <h3>Premium Design</h3>
-      <div class="price">₹9,999</div>
-      <p>Comprehensive design guidance for your interior project.</p>
-      <ul>
-        <li>Detailed space planning</li>
-        <li>Room-wise design concepts</li>
-        <li>Material and finish recommendations</li>
-        <li>Furniture and lighting direction</li>
-        <li>Indicative project budget guidance</li>
-      </ul>
-      <a class="btn" href="#enquiry">Choose Premium Design</a>
-    </div>
+    <p style="margin-top:20px;font-size:13px;color:#666;">
+      Package deliverables and timelines will be confirmed with InkDesign Studio
+      before the design work begins.
+    </p>
+  </section>
 
-  </div>
-
-  <p style="margin-top:20px;font-size:13px;color:#666;">
-    Package deliverables and timelines will be confirmed with InkDesign Studio before the design work begins.
-  </p>
-</section>
-
+  <!-- COMMON ENQUIRY FORM -->
   <section class="section" id="enquiry" style="background:#eeeee7;">
+
     <div class="section-heading">
       <div class="eyebrow">Step 1 · Tell us about your space</div>
       <h2>Let's understand your vision.</h2>
-      <p>Complete the details below so we can prepare the right starting point for your project.</p>
+      <p>
+        Complete the details below so we can prepare the right starting point
+        for your project.
+      </p>
     </div>
 
     <div class="form-wrap">
-      <form id="designEnquiry">
-        <div class="form-grid">
-          
-<div class="field full">
-  <label for="package">Select your design package *</label>
-  <select id="package" name="package" required>
-    <option value="">Choose a package</option>
-    <option value="Starter Report - 199">Starter Report — ₹199</option>
-    <option value="Basic Layout Planning - 999">Basic Layout Planning — ₹999</option>
-    <option value="Detailed Design - 4999">Detailed Design — ₹4,999</option>
-    <option value="Premium Design - 9999">Premium Design — ₹9,999</option>
-  </select>
-</div>
 
+      <form id="designEnquiry">
+
+        <div class="form-grid">
+
+          <!-- PACKAGE SELECTION -->
+          <div class="field full">
+            <label for="package">Select your design package *</label>
+
+            <select id="package" name="package" required>
+              <option value="">Choose a package</option>
+              <option value="Starter Report - 199">Starter Report — ₹199</option>
+              <option value="Basic Layout Planning - 999">Basic Layout Planning — ₹999</option>
+              <option value="Detailed Design - 4999">Detailed Design — ₹4,999</option>
+              <option value="Premium Design - 9999">Premium Design — ₹9,999</option>
+            </select>
+          </div>
+
+          <!-- CUSTOMER DETAILS -->
           <div class="field">
             <label for="name">Full name *</label>
             <input id="name" name="name" autocomplete="name" required>
           </div>
+
           <div class="field">
             <label for="phone">WhatsApp / mobile number *</label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel"
-              inputmode="tel" pattern="[0-9+() -]{8,18}" required>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              autocomplete="tel"
+              inputmode="tel"
+              pattern="[0-9+() -]{8,18}"
+              required>
           </div>
+
           <div class="field">
             <label for="email">Email address *</label>
-            <input id="email" name="email" type="email" autocomplete="email" required>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required>
           </div>
+
           <div class="field">
             <label for="location">Property location / city *</label>
-            <input id="location" name="location" placeholder="e.g. Navi Mumbai" required>
+            <input
+              id="location"
+              name="location"
+              placeholder="e.g. Navi Mumbai"
+              required>
           </div>
+
+          <!-- PROPERTY DETAILS -->
           <div class="field">
             <label for="property">Property type *</label>
+
             <select id="property" name="property" required>
               <option value="">Select property type</option>
               <option>Studio Apartment</option>
@@ -332,8 +539,10 @@
               <option>Other</option>
             </select>
           </div>
+
           <div class="field">
             <label for="stage">Project stage *</label>
+
             <select id="stage" name="stage" required>
               <option value="">Select project stage</option>
               <option>Planning to buy / rent</option>
@@ -344,12 +553,20 @@
               <option>Under construction</option>
             </select>
           </div>
+
           <div class="field">
             <label for="area">Approximate area (sq. ft.)</label>
-            <input id="area" name="area" type="number" min="1" placeholder="e.g. 950">
+            <input
+              id="area"
+              name="area"
+              type="number"
+              min="1"
+              placeholder="e.g. 950">
           </div>
+
           <div class="field">
             <label for="rooms">Spaces to design *</label>
+
             <select id="rooms" name="rooms" required>
               <option value="">Select spaces</option>
               <option>Entire property</option>
@@ -363,8 +580,10 @@
               <option>Other / not sure yet</option>
             </select>
           </div>
+
           <div class="field">
             <label for="budget">Indicative interior budget *</label>
+
             <select id="budget" name="budget" required>
               <option value="">Select budget range</option>
               <option>Below ₹2 lakh</option>
@@ -376,32 +595,13 @@
               <option>Need guidance to decide</option>
             </select>
           </div>
+
+          <!-- DESIGN STYLE: KEEP ALL OPTIONS INSIDE THIS SELECT -->
           <div class="field">
             <label for="style">Preferred design style *</label>
+
             <select id="style" name="style" required>
               <option value="">Select a style</option>
-              
-<div class="field full">
-  <label for="layoutFile">Upload floor plan / layout</label>
-  <input
-    id="layoutFile"
-    name="layoutFile"
-    type="file"
-    accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png">
-  <span class="hint">PDF, JPG or PNG. Maximum recommended size: 10 MB.</span>
-</div>
-
-<div class="field full">
-  <label for="roomPhotos">Upload room photos (optional)</label>
-  <input
-    id="roomPhotos"
-    name="roomPhotos"
-    type="file"
-    accept=".jpg,.jpeg,.png,image/jpeg,image/png"
-    multiple>
-  <span class="hint">You can select multiple photos of your existing room or design inspiration.</span>
-</div>
-
               <option>Modern contemporary</option>
               <option>Minimalist</option>
               <option>Luxury / premium</option>
@@ -414,23 +614,68 @@
               <option>Not sure — recommend a style</option>
             </select>
           </div>
+
+          <!-- FLOOR PLAN UPLOAD -->
+          <div class="field full">
+            <label for="layoutFile">Upload floor plan / layout</label>
+
+            <input
+              id="layoutFile"
+              name="layoutFile"
+              type="file"
+              accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png">
+
+            <span class="hint">
+              PDF, JPG or PNG. Maximum recommended size: 10 MB.
+            </span>
+          </div>
+
+          <!-- ROOM PHOTO UPLOAD -->
+          <div class="field full">
+            <label for="roomPhotos">Upload room photos (optional)</label>
+
+            <input
+              id="roomPhotos"
+              name="roomPhotos"
+              type="file"
+              accept=".jpg,.jpeg,.png,image/jpeg,image/png"
+              multiple>
+
+            <span class="hint">
+              You can select multiple photos of your existing room or design inspiration.
+            </span>
+          </div>
+
+          <!-- ADDITIONAL REQUIREMENTS -->
           <div class="field full">
             <label for="requirements">Specific needs or ideas</label>
-            <textarea id="requirements" name="requirements"
+
+            <textarea
+              id="requirements"
+              name="requirements"
               placeholder="Tell us about storage, family needs, must-have features, rental goals or anything else important."></textarea>
           </div>
+
         </div>
 
         <div class="notice">
           <strong>What happens next?</strong><br>
-          Your details will help us understand your requirements. The enquiry form is currently a preview and does not yet submit or store your information. Payment and report generation will be connected and tested separately.
+          Complete the form to review your design requirements. This form is
+          currently a preview and does not yet submit or store your details,
+          and uploaded files are not sent to InkDesign Studio. Payment and
+          report generation will be connected and tested separately.
         </div>
+
         <button class="btn" type="submit">Review My Design Details</button>
+
         <p class="hint">No payment is taken by this button at this stage.</p>
+
         <p id="formMessage" role="status" aria-live="polite"></p>
+
       </form>
     </div>
   </section>
+
 </main>
 
 <footer class="footer">
@@ -440,10 +685,25 @@
 </footer>
 
 <script>
+  // Clicking a package card selects that package in the common form.
+  document.querySelectorAll("[data-package]").forEach(function(button) {
+    button.addEventListener("click", function() {
+      const packageSelect = document.getElementById("package");
+      packageSelect.value = this.dataset.package;
+    });
+  });
+
+  // Preview only: no customer data or files are submitted or saved.
   document.getElementById("designEnquiry").addEventListener("submit", function(event) {
     event.preventDefault();
-    document.getElementById("formMessage").textContent =
-      "Preview only: your details have not been sent or saved. We will connect the form after the page design is approved.";
+
+    const selectedPackage = document.getElementById("package").value;
+    const message = document.getElementById("formMessage");
+
+    message.textContent =
+      "Preview only: your selected package is " + selectedPackage +
+      ". Your details and uploaded files have not been sent or saved. " +
+      "Form submission and payment will be connected separately.";
   });
 </script>
 
