@@ -389,7 +389,7 @@
           <li>Colour and material ideas</li>
           <li>Indicative budget insights</li>
         </ul>
-        <a class="btn" href="#enquiry" data-package="Starter Report - 199">
+        <a class="btn" href="https://rzp.io/rzp/plan199">
           Choose Starter Report
         </a>
       </div>
@@ -405,7 +405,7 @@
           <li>Basic design direction</li>
           <li>Colour and style suggestions</li>
         </ul>
-        <a class="btn" href="#enquiry" data-package="Basic Layout Planning - 999">
+        <a class="btn" href="https://rzp.io/rzp/basicplan999">
           Choose Basic Layout
         </a>
       </div>
@@ -421,7 +421,7 @@
           <li>Colour and material recommendations</li>
           <li>Indicative budget guidance</li>
         </ul>
-        <a class="btn" href="#enquiry" data-package="Detailed Design - 4999">
+        <a class="btn" href="https://rzp.io/rzp/standard4999">
           Choose Detailed Design
         </a>
       </div>
@@ -438,7 +438,7 @@
           <li>Furniture and lighting direction</li>
           <li>Indicative project budget guidance</li>
         </ul>
-        <a class="btn" href="#enquiry" data-package="Premium Design - 9999">
+        <a class="btn" href="https://rzp.io/rzp/Premiumplan9999">
           Choose Premium Design
         </a>
       </div>
@@ -685,14 +685,6 @@
 </footer>
 
 <script>
-  // Clicking a package card selects that package in the common form.
-  document.querySelectorAll("[data-package]").forEach(function(button) {
-    button.addEventListener("click", function() {
-      const packageSelect = document.getElementById("package");
-      packageSelect.value = this.dataset.package;
-    });
-  });
-
   // Preview only: no customer data or files are submitted or saved.
   document.getElementById("designEnquiry").addEventListener("submit", function(event) {
     event.preventDefault();
