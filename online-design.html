@@ -389,7 +389,7 @@
           <li>Colour and material ideas</li>
           <li>Indicative budget insights</li>
         </ul>
-        <a class="btn" href="https://rzp.io/rzp/plan199">
+        <a class="btn" href="#enquiry" data-package="Starter Report - 199">
           Choose Starter Report
         </a>
       </div>
@@ -405,7 +405,7 @@
           <li>Basic design direction</li>
           <li>Colour and style suggestions</li>
         </ul>
-        <a class="btn" href="https://rzp.io/rzp/basicplan999">
+        <a class="btn" href="#enquiry" data-package="Basic Layout Planning - 999">
           Choose Basic Layout
         </a>
       </div>
@@ -421,7 +421,7 @@
           <li>Colour and material recommendations</li>
           <li>Indicative budget guidance</li>
         </ul>
-        <a class="btn" href="https://rzp.io/rzp/standard4999">
+        <a class="btn" href="#enquiry" data-package="Detailed Design - 4999">
           Choose Detailed Design
         </a>
       </div>
@@ -438,7 +438,7 @@
           <li>Furniture and lighting direction</li>
           <li>Indicative project budget guidance</li>
         </ul>
-        <a class="btn" href="https://rzp.io/rzp/Premiumplan9999">
+        <a class="btn" href="#enquiry" data-package="Premium Design - 9999">
           Choose Premium Design
         </a>
       </div>
@@ -660,15 +660,21 @@
 
         <div class="notice">
           <strong>What happens next?</strong><br>
-          Complete the form to review your design requirements. This form is
-          currently a preview and does not yet submit or store your details,
-          and uploaded files are not sent to InkDesign Studio. Payment and
-          report generation will be connected and tested separately.
+          Step 1: Choose your package and complete the form. Step 2: Review your
+          details. Step 3: Continue to the matching Razorpay payment page.
+          Your form details and uploaded files are not automatically sent or saved
+          by this page, so please keep your information available for follow-up.
         </div>
 
         <button class="btn" type="submit">Review My Design Details</button>
 
-        <p class="hint">No payment is taken by this button at this stage.</p>
+        <div id="reviewPanel" class="notice" style="display:none;margin-top:20px;">
+          <h3 style="margin-top:0;">Review your details</h3>
+          <div id="reviewDetails"></div>
+          <p class="hint">Please check the details above. Continuing will open Razorpay in a new tab. Your form details and selected files are not transmitted with the payment.</p>
+          <a id="paymentButton" class="btn" href="#" target="_blank" rel="noopener">Continue to Payment</a>
+          <button class="btn" id="editDetailsButton" type="button" style="margin-left:8px;">Edit Details</button>
+        </div>
 
         <p id="formMessage" role="status" aria-live="polite"></p>
 
@@ -685,17 +691,75 @@
 </footer>
 
 <script>
-  // Preview only: no customer data or files are submitted or saved.
-  document.getElementById("designEnquiry").addEventListener("submit", function(event) {
+  const paymentLinks = {
+    "Starter Report - 199": "https://rzp.io/rzp/plan199",
+    "Basic Layout Planning - 999": "https://rzp.io/rzp/basicplan999",
+    "Detailed Design - 4999": "https://rzp.io/rzp/standard4999",
+    "Premium Design - 9999": "https://rzp.io/rzp/Premiumplan9999"
+  };
+  const packagePrices = {
+    "Starter Report - 199": "₹199",
+    "Basic Layout Planning - 999": "₹999",
+    "Detailed Design - 4999": "₹4,999",
+    "Premium Design - 9999": "₹9,999"
+  };
+
+  // Package buttons keep the original journey: select package and scroll to form.
+  document.querySelectorAll("[data-package]").forEach(function(button) {
+    button.addEventListener("click", function() {
+      document.getElementById("package").value = this.dataset.package;
+      document.getElementById("reviewPanel").style.display = "none";
+    });
+  });
+
+  const form = document.getElementById("designEnquiry");
+  form.addEventListener("submit", function(event) {
     event.preventDefault();
+    if (!form.reportValidity()) return;
 
     const selectedPackage = document.getElementById("package").value;
+    const paymentUrl = paymentLinks[selectedPackage];
+    const reviewPanel = document.getElementById("reviewPanel");
+    const reviewDetails = document.getElementById("reviewDetails");
+    const paymentButton = document.getElementById("paymentButton");
     const message = document.getElementById("formMessage");
 
-    message.textContent =
-      "Preview only: your selected package is " + selectedPackage +
-      ". Your details and uploaded files have not been sent or saved. " +
-      "Form submission and payment will be connected separately.";
+    if (!paymentUrl) {
+      message.textContent = "Please select a design package before continuing.";
+      return;
+    }
+
+    const fields = [
+      ["Package", selectedPackage.replace(/ - \d+$/, "")],
+      ["Price", packagePrices[selectedPackage]],
+      ["Name", document.getElementById("name").value.trim()],
+      ["WhatsApp / mobile", document.getElementById("phone").value.trim()],
+      ["Email", document.getElementById("email").value.trim()],
+      ["Property type", document.getElementById("propertyType")?.value || ""],
+      ["Project location", document.getElementById("location")?.value || ""],
+      ["Specific needs", document.getElementById("requirements").value.trim()]
+    ].filter(function(item) { return item[1]; });
+
+    reviewDetails.replaceChildren();
+    fields.forEach(function(item) {
+      const row = document.createElement("p");
+      row.style.margin = "8px 0";
+      const label = document.createElement("strong");
+      label.textContent = item[0] + ": ";
+      row.appendChild(label);
+      row.appendChild(document.createTextNode(item[1]));
+      reviewDetails.appendChild(row);
+    });
+
+    paymentButton.href = paymentUrl;
+    reviewPanel.style.display = "block";
+    message.textContent = "Please review your details below. When ready, continue to the matching Razorpay payment page.";
+    reviewPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  document.getElementById("editDetailsButton").addEventListener("click", function() {
+    document.getElementById("reviewPanel").style.display = "none";
+    document.getElementById("name").focus();
   });
 </script>
 
